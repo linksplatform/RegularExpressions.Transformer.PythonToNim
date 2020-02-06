@@ -7,14 +7,14 @@ setuptools.setup(
     name="py2nim",
     version="0.0.1",
     author="Ethosa",
-    author_email="mail@gmail.com",
-    description="",
+    author_email="social.ethosa@gmail.com",
+    description="Python to Nim lang translator",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="",
+    url="https://github.com/linksplatform/RegularExpressions.Transformer.PythonToNim",
     packages=setuptools.find_packages(),
     license="LGPLv3",
-    keywords="",
+    keywords="python nim translator",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3",
@@ -26,9 +26,10 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     project_urls={
-        "Github": "",
-        "Documentation": "",
+        "Github": "https://github.com/linksplatform/RegularExpressions.Transformer.PythonToNim",
     },
     python_requires=">=3",
-    install_requires=["retranslator"]
+    install_requires=[
+        "retranslator",
+    ]
 )

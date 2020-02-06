@@ -3,29 +3,25 @@
 
 from py2nim import PythonToNim
 
-if __name__ == "__main__":
-    test = PythonToNim(useRegex=True)
 
-    code = """
-# author: Ethosa
+test = PythonToNim(useRegex=True)
 
-# -----=== Varibales ===-----
-# Integer
-int_variable = 10
-# Float
-float_variable = 10.0
-# Boolean
-bool_variable = True
-# Strings
-string_variable = "Hello"
-string_variable3 = '''Hello'''
-string_variable2 = \"\"\"Hello\"\"\"
+code = """
+class MyClass(object):
+    test_var: int
+    def __init__(self):
+        self.test_var = 0
 
-string_variable1 = 'Hello'
-s = "Hello world"
-s = "1"
-s = ""
+m = MyClass()
+"""
+print(test.Transform(code))
 
-    """
 
-    print(test.Transform(code))
+# class A:
+#     a: int
+#     b: str
+#     def __init__(self):
+#         self.a = 5
+
+# a = A()
+# print(a)

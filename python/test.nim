@@ -1,10 +1,10 @@
+type MyClass = object  # please, create newMyClass function!
+    test_var: int
 
-# author: Ethosa
+proc newMyClass(test_var: int): MyClass =
+    return MyClass(test_var: test_var)
 
-# -----=== Varibales ===-----
-# Integer
-var int_variable: int = 10
-# Float
-var float_variable: float = 10.0
-# Boolean
-var bool_variable: bool = True
+proc init(self: MyClass): any =
+        self.test_var = 0
+
+var m = newMyClass(5)
